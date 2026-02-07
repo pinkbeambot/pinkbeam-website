@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pink Beam Website
+
+The marketing website for Pink Beam — a Living Intelligence Factory.
+
+## Tech Stack
+
+- **Framework:** Next.js 14+ (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **UI Components:** shadcn/ui
+- **Animations:** Framer Motion + GSAP
+- **Testing:** Vitest + React Testing Library
+- **Deployment:** Vercel
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Clone the repository
+git clone https://github.com/pinkbeambot/pinkbeam-website.git
+cd pinkbeam-website
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Open http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Available Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server with Turbopack |
+| `npm run build` | Create production build |
+| `npm run start` | Start production server |
+| `npm run lint` | Run ESLint |
+| `npm run test` | Run Vitest tests |
+| `npm run test:ui` | Run tests with UI |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+app/              # Next.js App Router pages
+components/       # React components
+  ui/             # shadcn/ui components
+hooks/            # Custom React hooks
+lib/              # Utility functions
+types/            # TypeScript type definitions
+public/           # Static assets
+  images/         # Optimized images
+  videos/         # Video assets
+styles/           # Global styles, Tailwind config
+content/          # CMS content (Sanity)
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Environment Variables
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Copy `.env.example` to `.env.local` and fill in your values:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+cp .env.example .env.local
+```
 
-## Deploy on Vercel
+See `.env.example` for required variables.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Design System
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Colors:** Neutral base with semantic tokens
+- **Typography:** System font stack (optimized for performance)
+- **Spacing:** 4px base grid (Tailwind default)
+- **Animations:** 60fps target, purposeful motion
+
+## Performance Budget
+
+- First Contentful Paint: < 1.0s
+- Time to Interactive: < 3.0s
+- Lighthouse Score: 95+
+- JS Bundle: < 200KB gzipped
+
+## Contributing
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
+
+## License
+
+Private — All rights reserved.
